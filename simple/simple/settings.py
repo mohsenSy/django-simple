@@ -25,7 +25,7 @@ SECRET_KEY = '@9t^9ohbcjgy$yovpj5%%l3ms5a$p(tyjg(=3uh&dc65+syi&#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["142.93.96.74"]
+ALLOWED_HOSTS = ["142.93.96.74", "django-simple-ur8pn.ondigitalocean.app"]
 
 
 # Application definition
