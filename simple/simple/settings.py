@@ -25,7 +25,8 @@ SECRET_KEY = '@9t^9ohbcjgy$yovpj5%%l3ms5a$p(tyjg(=3uh&dc65+syi&#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["142.93.96.74", "django-simple-ur8pn.ondigitalocean.app"]
+ALLOWED_HOSTS = ["142.93.96.74",
+                 "django-simple-ur8pn.ondigitalocean.app", "127.0.0.1"]
 
 
 # Application definition
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'simple.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'PASSWORD': os.environ["DB_PASSWORD"],
+        'PORT': 25060,
+        'HOST': 'db-mysql-ams3-73955-do-user-1548131-0.b.db.ondigitalocean.com',
+        'USER': 'mouhsen',
+        'NAME': 'django-db'
     }
 }
 
